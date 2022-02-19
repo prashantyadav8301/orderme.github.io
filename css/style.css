@@ -1,0 +1,222 @@
+/* CSS reset */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* CSS Variables */
+
+:root{
+    --navbar-height:59px;
+}
+
+/* Navigation Bar */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    /* position: absolute; */
+    position: sticky;
+    top: 0px;
+}
+#navbar::before{
+    content:"";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.40;
+}
+
+
+/* logo and image */
+.logo{
+    margin: 3px 20px;
+}
+
+.logo img{
+    margin: 2px 10px;
+    /* padding: 12px; */
+    height: 50px;
+}
+
+/* list styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Anton', sans-serif;
+}
+#navbar ul li{
+     list-style: none;
+     font-size: 20px;
+     /* padding: 1rem; */
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 0px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home section  */
+
+#home{
+    display:flex;
+    flex-direction: column;
+    padding: 3px 160px;
+    height: 572px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content:"";
+    position: absolute;
+    background:url("../pictures/background.jpg") no-repeat center center/cover;
+    height: 642px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.89;
+}
+#home h1{    
+    color: black;
+    font-size: 3.8rem;
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+}
+#home p{    
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Source Code Pro', monospace;
+}
+/* Services Section  */
+
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background-color: rgb(226, 206, 207);
+}
+#services .box img{
+    height: 140px;
+    margin: auto;
+    display: block;
+}
+#services .box p{
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* contact section  */
+
+#contact{
+    position: relative;
+}
+
+#contact::before{
+    content:"";
+    position: absolute;
+    background: url("../pictures/contact.jpg") no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6  ;
+
+}
+/* Client section  */
+
+#client-section{
+    height: 344px;
+    /* position: relative; */
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url("../pictures/customer.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+    opacity: 0.4;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clients img{
+    height: 150px;
+    width: 200px;
+}
+.client-item{
+    padding: 34px;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding:0.5rem;
+    border-radius:9px;
+    font-size: 1.1rem;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+   font-size: 1.3rem;
+   font-family:'Source Code Pro', monospace ;
+}
+
+footer{
+    background:black ;
+    color: white;
+    padding: 10px 20px;
+}
+/* utility classes */
+
+.h-primary{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2.8rem;
+    padding: 12px;
+}
+.h-secondary{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.8rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    margin: 20px;
+    background-color: yellowgreen;
+    font-size: 15px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
